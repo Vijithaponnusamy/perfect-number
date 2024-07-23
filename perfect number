@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        
+        int num = scanner.nextInt();
+            if (num < 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+                int sumOfDivisors = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sumOfDivisors += i;
+            }
+        }
+        if (sumOfDivisors == num) {
+            System.out.printf("The Number %.1f is a Perfect Number.%n", (double) num);
+        } else {
+            System.out.printf("The Number %.1f is a Not Perfect Number.%n", (double) num);
+        }
+    }
+}
+    
